@@ -49,37 +49,54 @@
     <title>PHP Hotel</title>
 </head>
 <body>
+
+<form action="filter.php" method="GET" class="mt-3">
+    <label for="parking">parking</label>
+    <input type="text" name="parking" id="parking">
+    <!-- voto -->
+    <label for="vote">vote</label>
+    <input type="text" name="vote" id="vote">
+
+    <button>submit</button>
+</form>
+
+<hr>
+
+<!-- tabella -->
 <table class="table">
-  <thead>
-    <tr>
-        <th>
-            name
-        </th>
-        <th>
-            description
-        </th>
-        <th>
-            parking
-        </th>
-        <th>
-            vote
-        </th>
-        <th>
-        distance to center
-        </th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php foreach($hotels as $hotel){ ?>
-         <tr>
-             <?php foreach($hotel as $value){ ?>
-                <td>
-                    <?php echo $value; ?> 
-                </td>
-             <?php } ?>
-         </tr>
-        <?php } ?>
-  </tbody>
+    <!-- header -->
+    <thead>
+        <tr>
+            <th>
+                name
+            </th>
+            <th>
+                description
+            </th>
+            <th>
+                parking
+            </th>
+            <th>
+                vote
+            </th>
+            <th>
+            distance to center
+            </th>
+        </tr>
+    </thead>
+    <!-- header -->
+    <tbody>
+        <?php foreach($hotels as $hotel){ ?>
+            <tr>
+                <?php foreach($hotel as $value){ ?>
+                    <td>
+                        <?php echo $value; ?> 
+                    </td>
+                <?php } ?>
+            </tr>
+            <?php } ?>
+    </tbody>
 </table>
+<!-- tabella -->
 </body>
 </html>

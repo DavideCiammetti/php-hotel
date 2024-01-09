@@ -45,3 +45,13 @@ Dopo aggiungere Bootstrap e mostrate le informazioni con una tabella.
         ],
     ];
 ?>
+
+# filter.php
+
+nel secondo file sono andato a gestire il form che ho creato nel primo.
+avendo 2 campi di input dove nel primo vado a cercare gli hotel con il parcheggio o meno e nel secondo gli hotel con un determinato voto.
+
+## voto 
+per il voto ho considerato che una volta inserito un numero vengano presi tutti gli hotel che hanno un voto maggiore o uguale a quello inserito 
+
+ed ho gestito il tutto tramite la condizione if ed else if ed in fine nell'else ho inserito la tabella che viene mostrata in caso la ricerca venga effettuata in maniera sbagliata o non venga inserito nulla al suo interno 
