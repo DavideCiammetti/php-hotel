@@ -62,7 +62,9 @@
         <?php foreach($hotels as $hotel){?>
 
             <?php if($hotel['parking'] === true && $hotel['vote'] >= intval($vote)){ ?>
-                    <p> <?php  echo $hotel['name']. '<br>'; ?></p>
+                   <strong> <p> <?php  echo $hotel['name']. '<br>'; ?></p></strong>
+                    <p><?php echo 'il voto è:'."\t".$hotel['vote'] ?></p> <br>
+                    <p> <?php echo 'il parcheggio è presente' ?></p>
                 <?php } ?>
             <?php } ?>
                  <!-- se il parcheggio non ci deve essere e se il voto è maggiore di 0 -->
@@ -70,7 +72,9 @@
 
         <?php foreach($hotels as $hotel){  ?>
             <?php if($hotel['parking'] === false && $hotel['vote'] >= intval($vote)){ ?>
-                    <p> <?php  echo $hotel['name']. '<br>'; ?></p>
+                  <strong><p> <?php  echo $hotel['name']. '<br>'; ?></p></strong>
+                  <p><?php echo 'il voto è:'."\t".$hotel['vote'] ?></p> <br>
+                    <p> <?php echo 'il parcheggio non è presente' ?></p>
                 <?php } ?>
             <?php } ?>
             <!-- se il parcheggio non ci deve essere e non viene inserito voto -->
@@ -78,7 +82,8 @@
 
                 <?php foreach($hotels as $hotel){  ?>
                     <?php if($hotel['parking'] === false){ ?>
-                            <p> <?php  echo $hotel['name']. '<br>'; ?></p>
+                            <strong><p> <?php  echo $hotel['name']. '<br>'; ?></p></strong>
+                            <p><?php echo 'il parcheggio non è presente' ?></p>
                         <?php } ?>
                     <?php } ?>
                     <!-- se il parcheggio ci deve essere e non viene inserito voto -->
@@ -86,7 +91,8 @@
 
                 <?php foreach($hotels as $hotel){  ?>
                     <?php if($hotel['parking'] === true){ ?>
-                            <p> <?php  echo $hotel['name']. '<br>'; ?></p>
+                          <strong>  <p> <?php  echo $hotel['name']. '<br>'; ?></p></strong>
+                            <p><?php echo 'il parcheggio è presente' ?></p>
                         <?php } ?>
                     <?php } ?>
                       <!-- se non viene inserito parcheggio ma il voto si -->
@@ -94,7 +100,8 @@
 
                 <?php foreach($hotels as $hotel){  ?>
                     <?php if($hotel['vote'] >= $vote){ ?>
-                            <p> <?php  echo $hotel['name']. '<br>'; ?></p>
+                           <strong> <p> <?php  echo $hotel['name']. '<br>'; ?></p></strong>
+                           <p><?php echo 'il voto è:'."\t".$hotel['vote'] ?></p> <br>
                         <?php } ?>
                     <?php } ?>
                     <!-- se la ricerca non viene fatta o fatta in modo errato riporta la lista degli hotel -->
